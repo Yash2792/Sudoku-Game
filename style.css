@@ -439,14 +439,10 @@ nav {
 
     html,body{
         width: 100%;
-        height: 100%;
+        height: 80%;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-    }
-
-    .main-game{
-        height: 85vh;
     }
 
     .input-name,
