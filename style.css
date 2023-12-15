@@ -15,7 +15,7 @@
 
     --border-radius: 7px;
 
-    --space-y: 20px;
+    --space-y: 2vh;
 
     --gap: 1px;
 
@@ -233,7 +233,7 @@ nav {
     border: 2px solid black;
     border-radius: var(--border-radius);
     background-color: var(--bg-main);
-    color: var(--blue);
+    color: var(--black);
     display: grid;
     place-items: center;
     font-size: var(--font-size);
@@ -247,7 +247,7 @@ nav {
 
 .main-grid-cell.selected {
     /* background-color: var(--blue); */
-    color: var(--white);
+    color: var(--black);
 }
 
 .main-grid-cell:hover {
@@ -428,7 +428,7 @@ nav {
 
         --border-radius: 5px;
 
-        --space-y: 5px;
+        --space-y: 2vh;
 
         --gap: 2px;
 
@@ -448,5 +448,9 @@ nav {
 
     .screen {
         min-width: unset;
+    }
+
+    .numbers{
+        transform: translateY(-50px);
     }
 }
