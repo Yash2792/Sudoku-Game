@@ -47,8 +47,8 @@ const initGameGrid = () => {
     for (let i = 0; i < Math.pow(CONSTANT.GRID_SIZE, 2); i++) {
         let row = Math.floor(i / CONSTANT.GRID_SIZE);
         let col = i % CONSTANT.GRID_SIZE;
-        if (row === 2 || row === 5) cells[index].style.marginBottom = '5px';
-        if (col === 2 || col === 5) cells[index].style.marginRight = '5px';
+        if (row === 2 || row === 5) cells[index].style.marginBottom = '10px';
+        if (col === 2 || col === 5) cells[index].style.marginRight = '10px';
 
         index++;
     }
@@ -128,42 +128,44 @@ const loadSudoku = () => {
 }
 
 const hoverBg = (index) => {
-    let row = Math.floor(index / CONSTANT.GRID_SIZE);
-    let col = index % CONSTANT.GRID_SIZE;
+    cells[index].classList.add('hover');
+    
+    // let row = Math.floor(index / CONSTANT.GRID_SIZE);
+    // let col = index % CONSTANT.GRID_SIZE;
 
-    let box_start_row = row - row % 3;
-    let box_start_col = col - col % 3;
+    // let box_start_row = row - row % 3;
+    // let box_start_col = col - col % 3;
 
-    for (let i = 0; i < CONSTANT.BOX_SIZE; i++) {
-        for (let j = 0; j < CONSTANT.BOX_SIZE; j++) {
-            let cell = cells[9 * (box_start_row + i) + (box_start_col + j)];
-            cell.classList.add('hover');
-        }
-    }
+    // for (let i = 0; i < CONSTANT.BOX_SIZE; i++) {
+    //     for (let j = 0; j < CONSTANT.BOX_SIZE; j++) {
+    //         let cell = cells[9 * (box_start_row + i) + (box_start_col + j)];
+    //         cell.classList.add('hover');
+    //     }
+    // }
 
-    let step = 9;
-    while (index - step >= 0) {
-        cells[index - step].classList.add('hover');
-        step += 9;
-    }
+    // let step = 9;
+    // while (index - step >= 0) {
+    //     cells[index - step].classList.add('hover');
+    //     step += 9;
+    // }
 
-    step = 9;
-    while (index + step < 81) {
-        cells[index + step].classList.add('hover');
-        step += 9;
-    }
+    // step = 9;
+    // while (index + step < 81) {
+    //     cells[index + step].classList.add('hover');
+    //     step += 9;
+    // }
 
-    step = 1;
-    while (index - step >= 9*row) {
-        cells[index - step].classList.add('hover');
-        step += 1;
-    }
+    // step = 1;
+    // while (index - step >= 9*row) {
+    //     cells[index - step].classList.add('hover');
+    //     step += 1;
+    // }
 
-    step = 1;
-    while (index + step < 9*row + 9) {
-        cells[index + step].classList.add('hover');
-        step += 1;
-    }
+    // step = 1;
+    // while (index + step < 9*row + 9) {
+    //     cells[index + step].classList.add('hover');
+    //     step += 1;
+    // }
 }
 
 const resetBg = () => {

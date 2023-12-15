@@ -26,8 +26,8 @@
 }
 
 .dark {
-    --bg-main: #2a2a38;
-    --bg-body: #1a1a2e;
+    --bg-main: #33333a;
+    --bg-body: #131319;
     --color-txt: #9d9a9a;
     --filled-color: #9898ba;
     --filled-bg: #3232322d;
@@ -207,6 +207,7 @@ nav {
 }
 
 .main-game {
+    overflow: hidden;
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -229,7 +230,7 @@ nav {
 .main-grid-cell {
     height: var(--sudoku-cell-size);
     width: var(--sudoku-cell-size);
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: var(--border-radius);
     background-color: var(--bg-main);
     color: var(--blue);
@@ -245,7 +246,7 @@ nav {
 }
 
 .main-grid-cell.selected {
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
     color: var(--white);
 }
 
@@ -258,7 +259,7 @@ nav {
 }
 
 .dark .main-grid-cell.hover {
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
 }
 
 .main-grid-cell.err {
@@ -427,7 +428,7 @@ nav {
 
         --border-radius: 5px;
 
-        --space-y: 10px;
+        --space-y: 5px;
 
         --gap: 2px;
 
